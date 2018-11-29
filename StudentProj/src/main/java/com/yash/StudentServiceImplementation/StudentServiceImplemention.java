@@ -1,5 +1,7 @@
 package com.yash.StudentServiceImplementation;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,4 +23,13 @@ public class StudentServiceImplemention implements StudentService {
 		studentdao.add(student);
 
 	}
+	@Transactional(propagation=Propagation.REQUIRED)
+	public List<Student> getAllStudent() {
+		// TODO Auto-generated method stub
+		
+		List<Student> studentList= studentdao.getAllStudent();
+		return studentList;
+	}
+	
+	
 }

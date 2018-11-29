@@ -1,5 +1,9 @@
 package com.yash.daoimplementation;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,6 +21,16 @@ public class StudentDaoImplementation implements StudentDao {
 	
 		
 		}
+	public List<Student> getAllStudent() {
+		
+		Session session= sessionFactory.getCurrentSession();
+		
+		Criteria criteria= session.createCriteria(Student.class);
+		List<Student> studentList = (List<Student>) criteria.list();
+		return studentList;
+		
+		
+	}
 
 }
 

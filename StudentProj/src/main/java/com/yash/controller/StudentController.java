@@ -1,5 +1,7 @@
 package com.yash.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +24,16 @@ public class StudentController {
     {
     	studentservice.add(student);
     }
-	
+    
+    @RequestMapping(value="/getallstudent",method = RequestMethod.GET)
+    
+    public List<Student> getAllStudent(){
+    	
+    	List<Student> studentList = studentservice.getAllStudent();
+		return studentList;
+    	
+    	
+    }
 }
+	
+
