@@ -30,6 +30,21 @@ public class StudentServiceImplemention implements StudentService {
 		List<Student> studentList= studentdao.getAllStudent();
 		return studentList;
 	}
+	@Transactional(propagation=Propagation.REQUIRED)
+	public Student getStudentId(int studentId) {
+		// TODO Auto-generated method stub
+		
+		Student student=studentdao.getStudentId(studentId);
+		
+		return student;
+	}
+	@Transactional(propagation=Propagation.REQUIRED)
+	public int updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+		studentdao.updateStudent(student );
+		return 1;
+	}
 	
 	
 }

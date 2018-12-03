@@ -31,6 +31,19 @@ public class StudentDaoImplementation implements StudentDao {
 		
 		
 	}
-
+	public Student getStudentId(int studentId) {
+		// TODO Auto-generated method stub
+		
+		Student student = (Student) sessionFactory.getCurrentSession().get(Student.class, studentId);
+		return student;
+		
+	}
+	public int updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		
+		sessionFactory.getCurrentSession().saveOrUpdate(student);
+		return 1;
+	}
+	
 }
 

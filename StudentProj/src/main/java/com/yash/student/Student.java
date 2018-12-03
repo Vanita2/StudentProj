@@ -20,7 +20,7 @@ public class Student implements Serializable{
 	@Id
 	@Column(name="ID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	private int id;
 	@Column(name="NAME")
 	private String name;
 	@Column(name="AGE")
@@ -36,7 +36,7 @@ public class Student implements Serializable{
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
