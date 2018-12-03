@@ -79,6 +79,10 @@ public class StudentController {
 			return 1;
 		}
 	
+		/*
+		 
+		 delete the student details by student id in student database 
+		 */
 		
     }
 
