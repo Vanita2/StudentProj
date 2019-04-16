@@ -25,7 +25,7 @@ public class Student implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="ID")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	@Column(name="NAME")
 	private String name;
@@ -73,7 +73,5 @@ public class Student implements Serializable{
 	public void setAge(long age) {
 		this.age = age;
 	}
-	
-	
 
 }

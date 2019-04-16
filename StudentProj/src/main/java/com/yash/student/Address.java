@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="Address")
 public class Address {
 @Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
+@GeneratedValue(strategy=GenerationType.AUTO)
 	private int addrsssId;
 	private String addrssType;
 	private String addressLine1;
