@@ -4,6 +4,8 @@ public class Teacher {
 
 	private int id;
 	private String name;
+	private String Subjects;
+	
 	public int getId() {
 		return id;
 	}
